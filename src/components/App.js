@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 
+import NavItem from './NavItem';
+
 function App() {
   return (
     <div className="App">
@@ -8,9 +10,9 @@ function App() {
         <h1>Helvetic.dev</h1>
         <nav>
           <ul>
-            <li><a href="#main">Nav item 1</a></li>
-            <li><a href="#main">Nav item 2</a></li>
-            <li><a href="#main">Nav item 3</a></li>
+            <NavItem link="#main" name="Nav item 1" />
+            <NavItem link="#main" name="Nav item 2" />
+            <NavItem link="#main" name="Nav item 3" />
           </ul>
         </nav>
       </header>
