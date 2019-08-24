@@ -1,9 +1,15 @@
 import React from 'react';
 
+import Intro from './Intro';
+import About from './About';
+import PastWork from './PastWork';
+
 const Main = () => (
-  <main className="clearFix">
+  <main className="clearfix">
     <section>
-      Section 1
+      <Intro />
+      <About />
+      <PastWork />
     </section>
     <section>
       Section 2
