@@ -2,17 +2,19 @@ const pastWork = {
   title: 'Past Work',
   intro: 'While I have been involved in many projects over the last few years, only a small number have featured aspects that were uniquely mine. Some of the examples below are therefore from previous engagements where I had considerably greater creative control.',
   cs: {
-    summary: '',
+    company: 'Circus Street',
+    summary: 'Lorem ipsum dolor sit amet',
     projects: [
       {
-        title: '',
+        title: 'Circusstreet.com',
         link: 'https://www.circusstreet.com',
-        time: '',
-        text: '',
+        time: '(June 2019 - August 2019)',
+        text: 'Lorem ipsum dolor sit amet',
       },
     ],
   },
   mf: {
+    company: 'Matchesfashion.com',
     summary: 'Maintenance and development of Matchesfashion\'s global e-commerce platform\'s core running on SAP\'s Hybris platform.',
     projects: [
       {
@@ -24,6 +26,7 @@ const pastWork = {
     ],
   },
   offd: {
+    company: 'Office Depot',
     summary: 'A pan-european relatforming / brownfielding project to transition Office Depot Europe to SAP\'s Hybris platform.',
     projects: [
       {
@@ -35,6 +38,7 @@ const pastWork = {
     ],
   },
   cog: {
+    company: 'Cognizant Technology Solutions',
     summary: 'Design / develop Web pages using HTML5 / CSS3 / JS\n\nPrepare image assets from source files\n\nHelp back-end developers with integration\n\nUnit test deliverables',
     projects: [
       {
@@ -52,6 +56,7 @@ const pastWork = {
     ],
   },
   zappos: {
+    company: 'Zappos',
     summary: '',
     projects: [
       {
