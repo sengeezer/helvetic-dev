@@ -3,6 +3,7 @@ import React from 'react';
 import Intro from './Intro';
 import About from './About';
 import PastWork from './PastWork';
+import Contact from './Contact';
 
 const Main = () => (
   <main className="clearfix">
@@ -12,7 +13,7 @@ const Main = () => (
       <PastWork />
     </section>
     <section>
-      Section 2
+      <Contact />
     </section>
   </main>
 );
