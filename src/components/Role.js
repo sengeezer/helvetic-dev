@@ -1,6 +1,11 @@
 import React from 'react';
 
-const Role = ({ company, summary, project1 }) => (
+const Role = ({
+  company,
+  summary,
+  project1,
+  project2,
+}) => (
   <div className="role">
     <h3>
       Work for&nbsp;
@@ -17,6 +22,18 @@ const Role = ({ company, summary, project1 }) => (
         </h5>
         <p>{project1.text}</p>
       </li>
+      {
+        project2 && (
+        <li>
+          <h5>
+            <a href={project2.link}>{project2.title}</a>
+            &nbsp;
+            <span className="time">{project2.time}</span>
+          </h5>
+          <p>{project2.text}</p>
+        </li>
+        )
+      }
     </ul>
   </div>
 );
