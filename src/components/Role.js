@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ProjectText from './ProjectText';
+
 const Role = ({
   company,
   summary,
@@ -20,7 +22,9 @@ const Role = ({
           &nbsp;
           <span className="time">{project1.time}</span>
         </h5>
-        <p>{project1.text}</p>
+        <ProjectText>
+          <p>{project1.text}</p>
+        </ProjectText>
       </li>
       {
         project2 && (
@@ -30,7 +34,9 @@ const Role = ({
             &nbsp;
             <span className="time">{project2.time}</span>
           </h5>
-          <p>{project2.text}</p>
+          <ProjectText>
+            <p>{project2.text}</p>
+          </ProjectText>
         </li>
         )
       }
