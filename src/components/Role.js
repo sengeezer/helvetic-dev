@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 
 import ProjectText from './ProjectText';
 
@@ -23,7 +24,7 @@ const Role = ({
           <span className="time">{project1.time}</span>
         </h5>
         <ProjectText>
-          <p>{project1.text}</p>
+          <ReactMarkdown source={project1.text} />
         </ProjectText>
       </li>
       {
@@ -35,7 +36,7 @@ const Role = ({
             <span className="time">{project2.time}</span>
           </h5>
           <ProjectText>
-            <p>{project2.text}</p>
+            <ReactMarkdown source={project2.text} />
           </ProjectText>
         </li>
         )
