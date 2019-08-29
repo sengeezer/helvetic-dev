@@ -22,6 +22,10 @@ const Contact = () => (
         <a href={contact.platforms.blog}>Blog</a>
       </li>
     </ul>
+    <aside>
+      <h3>{contact.disclaimer.title}</h3>
+      <p>{contact.disclaimer.content}</p>
+    </aside>
   </div>
 );
 
