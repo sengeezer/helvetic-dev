@@ -22,12 +22,13 @@ body {
 
   header {
     background-color: #d52b1e;
-    padding: 2px 10px;
+    padding: 15px 10px;
     margin: 0;
 
     h1 {
       font-size: 1.5em;
       color: #fff;
+      margin-top: 0;
     }
 
     nav {
@@ -62,7 +63,8 @@ body {
     padding: 10px;
 
     section {
-      margin: 20px 0;
+      margin: 0;
+      padding: 10px 0;
       float: left;
 
       &:nth-of-type(1) {
@@ -71,6 +73,17 @@ body {
 
       &:nth-of-type(2) {
         width: 30%;
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+
+      .intro,
+      .about,
+      .pastWork,
+      .contact {
+        padding: 0 15px;
       }
     }
   }
