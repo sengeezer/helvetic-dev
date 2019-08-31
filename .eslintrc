@@ -6,6 +6,7 @@
   "rules": {
     "strict": 0,
     "react/jsx-filename-extension": 0,
-    "react/forbid-prop-types": 1
+    "react/forbid-prop-types": 1,
+    "react/state-in-constructor": 1
   }
 }

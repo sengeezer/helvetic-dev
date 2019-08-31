@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class NavItem extends Component {
   constructor(props) {
@@ -18,5 +19,10 @@ class NavItem extends Component {
     );
   }
 }
+
+NavItem.propTypes = {
+  link: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};
 
 export default NavItem;
