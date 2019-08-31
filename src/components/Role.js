@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 
 import ProjectText from './ProjectText';
@@ -44,5 +45,16 @@ const Role = ({
     </ul>
   </div>
 );
+
+Role.defaultProps = {
+  project2: false,
+};
+
+Role.propTypes = {
+  company: PropTypes.string.isRequired,
+  summary: PropTypes.string.isRequired,
+  project1: PropTypes.object.isRequired,
+  project2: PropTypes.object,
+};
 
 export default Role;
