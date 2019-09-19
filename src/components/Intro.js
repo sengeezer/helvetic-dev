@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Intro = () => (
-  <div className="intro">
+  <div className="intro panel">
     <h2>Welcome</h2>
     <p>Thank you for your interest in my work.</p>
     <p>

@@ -3,7 +3,7 @@ import React from 'react';
 import contact from '../content/contact';
 
 const Contact = () => (
-  <div className="contact">
+  <div className="contact panel">
     <h2>{contact.title}</h2>
     <ul>
       <li className="linkedIn">
