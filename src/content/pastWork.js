@@ -3,13 +3,13 @@ const pastWork = {
   intro: 'While I have been involved in many projects over the last few years, only a small number have featured aspects that were uniquely mine. Some of the examples below are therefore from previous engagements where I had considerably greater creative control.',
   cs: {
     company: 'Circus Street',
-    summary: 'Lorem ipsum dolor sit amet',
+    summary: 'Maintenance and development of core platform and adjacent utility apps.',
     projects: [
       {
         title: 'Circusstreet.com',
         link: 'https://www.circusstreet.com',
         time: '(June 2019 - August 2019)',
-        text: 'Lorem ipsum dolor sit amet',
+        text: 'Helped maintain and enhance existing applications that form part of the company\'s e-learning platform.\n\nTechnologies used: Javascript, React JS, AngularJS, SASS, Grunt, Node JS, Webpack.',
       },
     ],
   },
@@ -21,7 +21,7 @@ const pastWork = {
         title: 'Matchesfashion.com',
         link: 'https://www.matchesfashion.com',
         time: '(October 2016 - June 2019)',
-        text: 'Implement front end components of new features of online platform\n\nSupport maintenance of existing e-commerce features\n\nLead front end technology stack upgrade project\nTechnologies used: Hybris 5.x - 6.6, Webpack, ES2015+, Handlebars JS, SASS, Impex, Apache Velocity, jQuery',
+        text: 'Implemented front end components of new features of online platform\n\nSupported maintenance of existing e-commerce features\n\nLead front end technology stack upgrade project\n\nTechnologies used: Hybris 5.x - 6.6, Webpack, ES2015+, Handlebars JS, SASS, Impex, Apache Velocity, jQuery',
       },
     ],
   },
@@ -39,7 +39,7 @@ const pastWork = {
   },
   cog: {
     company: 'Cognizant Technology Solutions',
-    summary: 'Design / develop Web pages using HTML5 / CSS3 / JS\n\nPrepare image assets from source files\n\nHelp back-end developers with integration\n\nUnit test deliverables',
+    summary: 'Designed and developed web pages using HTML5 / CSS3 / JS\n\nPrepared image assets from source files\n\nHelped back-end developers with integration\n\nUnit tested deliverables',
     projects: [
       {
         title: 'Apple Online Store',
