@@ -1,63 +1,9 @@
-/* Utilities */
-.clearfix:after { 
-  content: "."; 
-  visibility: hidden; 
-  display: block; 
-  height: 0; 
-  clear: both;
-}
-
-/* Main styles */
-body {
-  text-align: center;
-  margin: 0;
-  background-color: #002d2d;
-}
 
 .App {
   margin: 0 auto;
   width: 95%;
   text-align: left;
   background-color: #fff;
-
-  header {
-    background-color: #d52b1e;
-    padding: 15px 10px;
-    margin: 0;
-
-    h1 {
-      font-size: 1.5em;
-      color: #fff;
-      margin-top: 0;
-    }
-
-    nav {
-      &:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-
-      ul {
-        list-style: none;
-        padding: 0;
-
-        li {
-          float: left;
-          padding-right: 15px;
-
-          a {
-            color: #fff;
-            text-decoration: none;
-
-            &:hover {
-              text-decoration: underline;
-            }
-          }
-        }
-      }
-    }
-  }
 
   main {
     padding: 10px;
@@ -69,15 +15,14 @@ body {
       font-style: normal;
       color: #222;
       text-rendering: optimizeLegibility;
-      // margin-top: .2rem;
-      // margin-bottom: .5rem;
+      margin-top: .2rem;
+      margin-bottom: .5rem;
       line-height: 1.4
     }
 
     section {
       margin: 0;
       padding: 10px 0;
-      // float: left;
 
       &:nth-of-type(1) {
         width: 70%;

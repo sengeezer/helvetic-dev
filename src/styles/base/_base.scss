@@ -6,7 +6,14 @@ html {
 body {
   font-family: $baseFont;
   font-size: $medium;
-  background-color: #fff;
+  text-align: center;
+  margin: 0;
+  background-color: #002d2d;
+}
+
+code {
+  font-family: $codeFont;
+  font-size: $small;
 }
 
 h1 {
