@@ -62,14 +62,26 @@ body {
   main {
     padding: 10px;
     background-color: #fefcd5;
+    display: flex;
+
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 400;
+      font-style: normal;
+      color: #222;
+      text-rendering: optimizeLegibility;
+      // margin-top: .2rem;
+      // margin-bottom: .5rem;
+      line-height: 1.4
+    }
 
     section {
       margin: 0;
       padding: 10px 0;
-      float: left;
+      // float: left;
 
       &:nth-of-type(1) {
         width: 70%;
+        margin-right: 25px;
       }
 
       &:nth-of-type(2) {
@@ -92,6 +104,18 @@ body {
       background-color: #f7eb99;
       border: 1px solid #f4e370;
       border-radius: 3px;
+    }
+
+    aside {
+      &.disclaimer {
+        background-color: #faf3f5;
+        border-color: #ebcdd2;
+
+        h3 {
+          background-color: #f04124;
+          color: #fff;
+        }
+      }
     }
   }
 

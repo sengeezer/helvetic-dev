@@ -1,6 +1,6 @@
 const pastWork = {
   title: 'Past Work',
-  intro: 'While I have been involved in many projects over the last few years, only a small number have featured aspects that were uniquely mine. Some of the examples below are therefore from previous engagements where I had considerably greater creative control.',
+  intro: 'While I have been involved in many projects in past roles, only a small number have featured aspects that were uniquely mine. Some of the examples below are therefore from previous engagements where I had considerably greater creative control.',
   cs: {
     company: 'Circus Street',
     summary: 'Maintenance and development of core platform and adjacent utility apps.',
