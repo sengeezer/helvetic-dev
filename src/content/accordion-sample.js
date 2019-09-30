@@ -1,22 +1,22 @@
-const paragraph = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet natus sint provident vel ab reprehenderit cum soluta, suscipit facere nisi sed earum repellendus fuga debitis, nam molestiae minima voluptates possimus.'
+const content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet natus sint provident vel ab reprehenderit cum soluta, suscipit facere nisi sed earum repellendus fuga debitis, nam molestiae minima voluptates possimus.'
 
 const data = [
   {
     title: 'Pricing plans',
-    paragraph,
+    content,
   },
   {
     title: 'How to apply',
-    paragraph,
+    content,
   },
   {
     title: 'Purchasing process',
-    paragraph,
+    content,
   },
   {
     title: 'Usage guides',
-    paragraph,
+    content,
   },
 ];
 
-export { paragraph, data };
+export { content, data };

@@ -2,17 +2,13 @@ import React, { Component } from 'react';
 
 class AccordionItem extends Component {
   state = { opened: false }
-  render () {
+
+  render() {
     const {
-      props: {
-        paragraph,
-        title
-      },
-      state: {
-        opened
-      }
+      props: { content, title },
+      state: { opened },
     } = this;
-    
+
     return (
       <div
         {...{
@@ -28,9 +24,7 @@ class AccordionItem extends Component {
         </div>
           <div {...{ className: 'accordion-item__inner' }}>
             <div {...{ className: 'accordion-item__content' }}>
-              <p {...{ className: 'accordion-item__paragraph' }}>
-                {paragraph}
-              </p>
+              {content}
             </div>
           </div>
       </div>
