@@ -9,7 +9,7 @@ const contact = {
   },
   disclaimer: {
     title: 'Please note',
-    content: 'Twitter and Facebook are personal accounts and especially on my blog, some content may be R / BBFC 18 rated.',
+    content: 'Twitter and Facebook are personal accounts and may feature content outside mainstream opinion. My blog may oftentimes also fall within this area.',
   },
 };
 

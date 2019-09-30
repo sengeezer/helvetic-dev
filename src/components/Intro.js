@@ -7,8 +7,7 @@ const Intro = () => (
     <p>
       Information not included in my&nbsp;
       <a href="/resume.pdf">resume</a>
-      , including additional biographical information, may be found in
-      the About section.
+      , including additional biographical information, may be found below.
     </p>
     <p>Fabio M. Albertin</p>
   </div>

@@ -8,3 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * `npm test`
 * `npm run build`
 * `npm run eject`
+
+## Credits
+
+* The Accordion component is based on [Accordion React Component](https://reactjsexample.com/accordion-react-component-with-animation/) by Artur Sedlukha.
