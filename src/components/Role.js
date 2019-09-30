@@ -54,7 +54,7 @@ Role.propTypes = {
   company: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired,
   project1: PropTypes.object.isRequired,
-  project2: PropTypes.object,
+  project2: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
 };
 
 export default Role;
