@@ -11,7 +11,7 @@ class AccordionItem extends Component {
 
     return (
       <div
-        className={`accordion-item, ${opened && 'accordion-item--opened'}`}
+        className={`accordion-item${opened ? ' accordion-item--opened' : ''}`}
         onClick={() => this.setState({ opened: !opened }) }
       >
         <div className="accordion-item__line">
