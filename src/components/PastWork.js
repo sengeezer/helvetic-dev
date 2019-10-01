@@ -1,15 +1,16 @@
 import React from 'react';
 
 import work from '../content/pastWork';
+import work1 from '../content/pastWork1';
 import Role from './Role';
 
-import { data } from '../content/accordion-sample';
+// import { data } from '../content/accordion-sample';
 import Accordion from './Accordion';
 
 const PastWork = () => (
   <div className="pastWork">
-    <h2>Past Work</h2>
-    <p>{work.intro}</p>
+    <h2>{work1.title}</h2>
+    <p>{work1.intro}</p>
     <ul>
       <li>
         <Role
@@ -49,7 +50,8 @@ const PastWork = () => (
         />
       </li>
     </ul>
-    <Accordion data={data} />
+    {/* <Accordion data={data} /> */}
+    <Accordion data={work1.positions} />
   </div>
 );
 
