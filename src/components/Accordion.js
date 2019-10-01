@@ -3,11 +3,11 @@ import AccordionItem from './AccordionItem';
 
 const Accordion = ({ data }) => {
   return (
-    <div {...{ className: 'wrapper' }}>
-      <ul {...{ className: 'accordion-list' }}>
+    <div className="wrapper">
+      <ul className="accordion-list">
         {data.map((data1, key) => {
           return (
-            <li {...{ className: 'accordion-list__item', key }}>
+            <li className="accordion-list__item" key={key}>
               <AccordionItem {...data1} />
             </li>
           );
