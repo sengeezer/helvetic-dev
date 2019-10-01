@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 
 import ProjectText from './ProjectText';
@@ -27,6 +28,7 @@ class AccordionItem extends Component {
         <div className="accordion-item__inner">
           <div className="accordion-item__content">
             {summary}
+            <h4>Projects</h4>
             <ul>
               {projects.map((project, pKey) => {
                 const key1 = pKey + Math.random() * 10;
@@ -50,5 +52,11 @@ class AccordionItem extends Component {
     );
   }
 }
+
+AccordionItem.propTypes = {
+  company: PropTypes.string.isRequired,
+  summary: PropTypes.string.isRequired,
+  projects: PropTypes.array.isRequired,
+};
 
 export default AccordionItem;
