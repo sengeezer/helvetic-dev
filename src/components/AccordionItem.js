@@ -27,7 +27,7 @@ class AccordionItem extends Component {
         </div>
         <div className="accordion-item__inner">
           <div className="accordion-item__content">
-            {summary}
+            <p className="roleSummary">{summary}</p>
             <h4>Projects</h4>
             <ul>
               {projects.map((project, pKey) => {
