@@ -48,6 +48,10 @@
     background-color: #fab68f;
     z-index: 2;
     position: relative;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
   
   &__title {
