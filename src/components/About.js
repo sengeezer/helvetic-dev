@@ -16,7 +16,7 @@ const About = () => (
         <strong>Citizenship:</strong> {bio.nationality}
       </li>
       <li>
-        Extracurricular interests:
+        <strong>Extracurricular interests:</strong>
         <ul>
           <li>{bio.interests[0]}</li>
           <li>{bio.interests[1]}</li>
