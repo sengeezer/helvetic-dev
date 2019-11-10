@@ -7,16 +7,13 @@ const About = () => (
     <h2>{bio.title}</h2>
     <ul>
       <li>
-        Age:&nbsp;
-        {bio.age}
+        <strong>Age:</strong> {bio.age}
       </li>
       <li>
-        Place of birth:&nbsp;
-        {bio.pob}
+        <strong>Place of birth:</strong> {bio.pob}
       </li>
       <li>
-        Citizenship:&nbsp;
-        {bio.nationality}
+        <strong>Citizenship:</strong> {bio.nationality}
       </li>
       <li>
         Extracurricular interests:
