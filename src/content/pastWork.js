@@ -3,6 +3,30 @@ const pastWork = {
   intro: 'While I have been involved in many projects in past roles, only a small number have featured aspects that were uniquely mine. Some of the examples below are therefore from previous engagements where I had considerably greater creative control.',
   positions: [
     {
+      company: 'Digital Ventures',
+      summary: 'Maintenance and development of Vivastreet, a classifieds application from the company\'s brand portfolio.',
+      projects: [
+        {
+          title: 'Vivastreet',
+          link: 'https://www.vivastreet.co.uk',
+          time: '(December 2019 - July 2020)',
+          text: 'Helped maintain and develop Vivastreet, a classifieds application that forms part of the company\'s brand portfolio.\n\nTechnologies used: Javascript, Grunt, SASS, Node JS, PHP, MySQL.',
+        },
+      ],
+    },
+    {
+      company: 'Career Development',
+      summary: 'Deepened and expanded knowledge of in demand technologies to increase value and expertise.',
+      projects: [
+        {
+          title: 'Career Development',
+          link: 'https://helvetic.dev',
+          time: '(September 2019 - November 2019)',
+          text: 'Deepened and expanded knowledge of in demand technologies to increase value and expertise.',
+        },
+      ],
+    },
+    {
       company: 'Circus Street',
       summary: 'Maintenance and development of core platform and adjacent utility apps.',
       projects: [
