@@ -1,5 +1,3 @@
-import React from 'react';
-
 import contact from '../content/contact';
 
 const Contact = () => (

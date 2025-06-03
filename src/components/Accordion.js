@@ -1,4 +1,3 @@
-import React from 'react';
 import AccordionItem from './AccordionItem';
 
 const Accordion = ({ data }) => {

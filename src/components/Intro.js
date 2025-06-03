@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Intro = () => (
   <div className="intro panel">
     <h2>Welcome</h2>
