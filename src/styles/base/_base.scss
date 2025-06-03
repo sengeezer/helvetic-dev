@@ -1,19 +1,21 @@
+@use "settings";
+
 // Make rem units base 10
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-family: $baseFont;
-  font-size: $medium;
+  font-family: settings.$baseFont;
+  font-size: settings.$medium;
   text-align: center;
   margin: 0;
   background-color: #002d2d;
 }
 
 code {
-  font-family: $codeFont;
-  font-size: $small;
+  font-family: settings.$codeFont;
+  font-size: settings.$small;
 }
 
 /* Utilities */

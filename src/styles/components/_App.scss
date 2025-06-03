@@ -1,3 +1,5 @@
+@use "../base/settings";
+
 .App {
   margin: 0 auto;
   width: 95%;
@@ -100,14 +102,14 @@
         border-color: #ebcdd2;
 
         h3 {
-          font-size: $medium;
+          font-size: settings.$medium;
           background-color: #f04124;
           color: #fff;
           padding: 0 7px;
         }
 
         p {
-          font-size: $small;
+          font-size: settings.$small;
           padding: 0 7px 10px 7px;
         }
       }
@@ -120,7 +122,7 @@
     padding: 2px 10px;
 
     p {
-      font-size: $small;
+      font-size: settings.$small;
     }
   }
 }
