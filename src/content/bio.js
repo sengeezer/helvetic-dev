@@ -1,6 +1,6 @@
 const bio = {
   title: 'About',
-  age: '39',
+  age: '44',
   pob: 'Zurich, Switzerland',
   nationality: 'Swiss',
   interests: [
