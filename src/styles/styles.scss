@@ -1,6 +1,6 @@
-@import "base/settings";
-@import "base/base";
+@use "base/settings";
+@use "base/base";
 
-@import "components/App";
-@import "components/Header";
-@import "components/Accordion";
+@use "components/App";
+@use "components/Header";
+@use "components/Accordion";

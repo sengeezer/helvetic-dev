@@ -1,5 +1,3 @@
-import React from 'react';
-
 import work from '../content/pastWork';
 import projectsData from '../content/projects';
 

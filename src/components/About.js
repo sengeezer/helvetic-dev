@@ -1,5 +1,3 @@
-import React from 'react';
-
 import bio from '../content/bio';
 
 const About = () => (

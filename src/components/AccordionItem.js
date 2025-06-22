@@ -40,7 +40,7 @@ class AccordionItem extends Component {
                       <span className="time">{project.time}</span>
                     </h5>
                     <ProjectText>
-                      <ReactMarkdown source={project.text} />
+                      <ReactMarkdown children={project.text} />
                     </ProjectText>
                   </li>
                 );

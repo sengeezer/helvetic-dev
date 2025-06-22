@@ -1,5 +1,3 @@
-import React from 'react';
-
 const RoleText = ({ children }) => (
   <div className="roleText">
     {children}
