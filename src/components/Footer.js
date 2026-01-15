@@ -1,7 +1,7 @@
 const Footer = () => (
   <footer>
     <p>
-      &copy; 2019 - 2025 F.M. Albertin |&nbsp;
+      &copy; 2019 - 2026 F.M. Albertin |&nbsp;
       Made with&nbsp;
       <a href="https://reactjs.org">React</a>
       . Colors by&nbsp;

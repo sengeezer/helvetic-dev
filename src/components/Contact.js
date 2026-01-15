@@ -8,7 +8,7 @@ const Contact = () => (
         <a href={contact.platforms.linkedin}>LinkedIn</a>
       </li>
       <li className="twitter">
-        <a href={contact.platforms.twitter}>Twitter</a>
+        <a href={contact.platforms.x}>X</a>
       </li>
       <li className="facebook">
         <a href={contact.platforms.facebook}>Facebook</a>

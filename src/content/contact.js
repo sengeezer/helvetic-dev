@@ -2,7 +2,7 @@ const contact = {
   title: 'Contact me',
   platforms: {
     linkedin: 'https://uk.linkedin.com/in/falbertin',
-    twitter: 'http://twitter.com/sengeezer',
+    x: 'http://twitter.com/sengeezer',
     facebook: 'http://facebook.com/a1bertin',
     github: 'http://github.com/sengeezer',
     blog: 'http://ifab.io/wire/',
