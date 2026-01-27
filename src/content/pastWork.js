@@ -3,6 +3,30 @@ const pastWork = {
   intro: 'While I have been involved in many projects in past roles, only a small number have featured aspects that were uniquely mine. Some of the examples below are therefore from previous engagements where I had considerably greater creative control.',
   positions: [
     {
+      company: 'Sainsbury\'s Supermarkets Ltd',
+      summary: 'Maintenance and development of Sainsbury\'s Insights Platform, a commercial analytics platform for internal and external clients.',
+      projects: [
+        {
+          title: 'Sainsbury\'s Insights Platform',
+          link: 'https://www.sainsburys-insights-platform.com',
+          time: '(September 2021 - present)',
+          text: 'Contribute to the evolution of the Sainsbury\'s Insights Platform, a commercial analytics platform for internal and external clients.\n\nTechnologies used: React, Express, D3.js, Typescript, Jest, AWS and GitHub Actions.',
+        },
+      ],
+    },
+    {
+      company: 'Funding Options',
+      summary: 'Maintenance and development of Funding Options, a financial services platform.',
+      projects: [
+        {
+          title: 'Funding Options',
+          link: 'https://www.fundingoptions.com',
+          time: '(December 2020 - September 2021)',
+          text: 'Contributed to the further development and daily maintenance of the Funding Options front end stack.\n\nTechnologies used: React, Gatsby, Typescript, SASS, GraphQL, Jest, Plop and Storybook',
+        },
+      ],
+    },
+    {
       company: 'Digital Ventures',
       summary: 'Maintenance and development of Vivastreet, a classifieds application from the company\'s brand portfolio.',
       projects: [

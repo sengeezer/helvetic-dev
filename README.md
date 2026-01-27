@@ -1,6 +1,6 @@
 # Helvetic.dev
 
-NextJS app.
+NextJS-powered online CV.
 
 ## Credits
 
