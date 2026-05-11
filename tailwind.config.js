@@ -71,7 +71,7 @@ module.exports = {
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
       boxShadow: {
-        shell: '0 18px 45px rgba(0, 0, 0, 0.18)',
+        shell: '0 10px 28px rgba(0, 0, 0, 0.12)',
       },
     },
   },

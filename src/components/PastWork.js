@@ -34,7 +34,7 @@ const PastWork = () => {
             </p>
           </CardHeader>
           <CardContent>
-            <ul className="grid gap-4 md:grid-cols-2">
+            <ul className="grid gap-4 xl:grid-cols-2">
               {projects.map((project) => (
                 <li key={project.url} className="rounded-lg border border-border bg-card px-4 py-4">
                   <h4 className="text-[1.65rem] font-semibold tracking-[-0.02em] text-foreground">
@@ -43,7 +43,10 @@ const PastWork = () => {
                   <p className="mt-2 text-[1.5rem] leading-relaxed text-muted-foreground">
                     {project.description}
                   </p>
-                  <a className="mt-4 inline-block text-[1.4rem] font-medium text-primary" href={project.url}>
+                  <a
+                    className="mt-4 inline-block break-all text-[1.4rem] font-medium text-primary"
+                    href={project.url}
+                  >
                     {project.url}
                   </a>
                 </li>
