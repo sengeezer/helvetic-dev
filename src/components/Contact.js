@@ -1,6 +1,7 @@
 import contact from '../content/contact';
 
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { Alert, AlertDescription, AlertTitle } from './ui/alert';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 
 const platforms = [
   { label: 'LinkedIn', url: contact.platforms.linkedin },
@@ -11,28 +12,38 @@ const platforms = [
 ];
 
 const Contact = () => (
-  <Card variant="panel">
-    <CardHeader>
+  <Card variant="panel" className="overflow-hidden">
+    <CardHeader className="space-y-4">
+      <p className="text-[1.15rem] font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+        Connect
+      </p>
       <CardTitle>{contact.title}</CardTitle>
+      <CardDescription>Find me on the following platforms.</CardDescription>
     </CardHeader>
     <CardContent className="space-y-5">
-      <ul className="space-y-2 text-[1.5rem] leading-relaxed">
+      <ul className="grid gap-3 text-[1.5rem] leading-relaxed sm:grid-cols-2 xl:grid-cols-1">
         {platforms.map((platform) => (
           <li key={platform.label}>
-            <a className="font-medium text-primary" href={platform.url}>
+            <a
+              className="flex items-center justify-between rounded-lg border border-border bg-shell px-4 py-3 font-medium text-primary no-underline transition hover:-translate-y-0.5 hover:shadow-sm"
+              href={platform.url}
+            >
               {platform.label}
+              <span aria-hidden="true" className="text-[1.2rem] text-muted-foreground">
+                ↗
+              </span>
             </a>
           </li>
         ))}
       </ul>
-      <aside className="overflow-hidden rounded-sm border border-disclaimer-border bg-disclaimer">
-        <h3 className="bg-primary px-3 py-2 text-[1.6rem] font-medium text-primary-foreground">
-          {contact.disclaimer.title}
-        </h3>
-        <p className="px-3 py-3 text-[1.2rem] leading-relaxed text-foreground">
+      <Alert variant="disclaimer" className="rounded-lg">
+        <div className="rounded-md bg-primary px-3 py-2 text-primary-foreground">
+          <AlertTitle className="mb-0 text-[1.4rem] font-semibold">{contact.disclaimer.title}</AlertTitle>
+        </div>
+        <AlertDescription className="px-1 pt-3 text-[1.3rem] text-foreground">
           {contact.disclaimer.content}
-        </p>
-      </aside>
+        </AlertDescription>
+      </Alert>
     </CardContent>
   </Card>
 );

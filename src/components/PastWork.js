@@ -9,38 +9,48 @@ const PastWork = () => {
 
   return (
     <Card variant="section">
-      <CardHeader className="space-y-8">
-        <div className="space-y-2">
+      <CardHeader className="space-y-4">
+        <p className="text-[1.15rem] font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+          Experience
+        </p>
+        <div className="space-y-3">
           <CardTitle>{work.title}</CardTitle>
-          <CardDescription>{work.intro}</CardDescription>
+          <CardDescription className="max-w-4xl">{work.intro}</CardDescription>
         </div>
       </CardHeader>
       <CardContent className="space-y-8">
         <Accordion data={work.positions} />
 
-        <div className="space-y-4 rounded-sm border border-border bg-shell p-4 md:p-5">
-          <div className="space-y-2">
-            <h3 className="text-[2rem] font-normal leading-tight text-foreground">
+        <Card variant="inset" className="space-y-4">
+          <CardHeader className="space-y-2 pb-0">
+            <p className="text-[1.15rem] font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+              Independent work
+            </p>
+            <h3 className="text-[2rem] font-semibold leading-tight tracking-[-0.02em] text-foreground sm:text-[2.2rem]">
               {projectsData.title}
             </h3>
-            <p className="text-[1.5rem] leading-relaxed text-muted-foreground">
+            <p className="text-[1.5rem] leading-relaxed text-muted-foreground sm:text-[1.6rem]">
               {projectsData.intro}
             </p>
-          </div>
-          <ul className="space-y-4">
-            {projects.map((project) => (
-              <li key={project.url} className="rounded-sm border border-border bg-card px-4 py-4">
-                <h4 className="text-[1.6rem] font-semibold text-foreground">{project.title}</h4>
-                <p className="mt-2 text-[1.5rem] leading-relaxed text-muted-foreground">
-                  {project.description}
-                </p>
-                <a className="mt-3 inline-block text-[1.4rem] text-primary" href={project.url}>
-                  {project.url}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+          </CardHeader>
+          <CardContent>
+            <ul className="grid gap-4 md:grid-cols-2">
+              {projects.map((project) => (
+                <li key={project.url} className="rounded-lg border border-border bg-card px-4 py-4">
+                  <h4 className="text-[1.65rem] font-semibold tracking-[-0.02em] text-foreground">
+                    {project.title}
+                  </h4>
+                  <p className="mt-2 text-[1.5rem] leading-relaxed text-muted-foreground">
+                    {project.description}
+                  </p>
+                  <a className="mt-4 inline-block text-[1.4rem] font-medium text-primary" href={project.url}>
+                    {project.url}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
       </CardContent>
     </Card>
   );

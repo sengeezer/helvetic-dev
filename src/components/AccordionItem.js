@@ -10,19 +10,27 @@ import {
 
 const AccordionItem = ({ company, summary, projects }) => (
   <UiAccordionItem value={company}>
-    <AccordionTrigger>Work for {company}</AccordionTrigger>
+    <AccordionTrigger>
+      <span className="flex flex-col gap-1">
+        <span className="text-[1.65rem] tracking-[-0.02em]">Work for {company}</span>
+        {summary ? (
+          <span className="text-[1.25rem] font-normal leading-relaxed text-muted-foreground">
+            {summary}
+          </span>
+        ) : null}
+      </span>
+    </AccordionTrigger>
     <AccordionContent>
       <div className="space-y-5">
-        {summary ? (
-          <p className="text-[1.5rem] leading-relaxed text-muted-foreground">{summary}</p>
-        ) : null}
         <div className="space-y-4">
-          <h4 className="text-[1.6rem] font-semibold text-foreground">Projects</h4>
+          <h4 className="text-[1.3rem] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+            Projects
+          </h4>
           <ul className="space-y-5">
             {projects.map((project) => (
               <li key={`${company}-${project.title}`}>
                 <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                  <h5 className="text-[1.5rem] font-semibold leading-relaxed text-foreground">
+                  <h5 className="text-[1.6rem] font-semibold leading-relaxed tracking-[-0.02em] text-foreground">
                     <a className="text-primary" href={project.link}>
                       {project.title}
                     </a>

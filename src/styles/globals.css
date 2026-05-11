@@ -4,23 +4,26 @@
 
 @layer base {
   :root {
-    --radius: 0.3rem;
+    --radius: 0.75rem;
     --page: #002d2d;
     --shell: #ffffff;
     --background: #fefcd5;
     --foreground: #222222;
     --card: #ffffff;
     --card-foreground: #222222;
+    --surface: #fff9dd;
+    --surface-foreground: #2b2b2b;
     --popover: #ffffff;
     --popover-foreground: #222222;
     --primary: #d52b1e;
     --primary-foreground: #ffffff;
     --secondary: #fefcd5;
     --secondary-foreground: #222222;
-    --muted: #fefcd5;
+    --muted: #fff8c9;
     --muted-foreground: #333333;
     --accent: #fab68f;
     --accent-foreground: #121212;
+    --accent-soft: #fde2d0;
     --border: #f4e370;
     --input: #f4e370;
     --ring: #3978ef;
@@ -41,11 +44,14 @@
 
   body {
     margin: 0;
+    min-height: 100vh;
     background-color: var(--page);
     color: var(--foreground);
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 1.6rem;
-    line-height: 1.5;
+    font-size: 1.7rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
   a {
@@ -69,12 +75,22 @@
     margin: 0;
   }
 
+  strong {
+    font-weight: 600;
+  }
+
   ul {
     margin: 0;
+    padding-left: 0;
   }
 
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
     font-size: 1.2rem;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--accent-foreground);
   }
 }

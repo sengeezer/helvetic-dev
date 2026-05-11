@@ -4,7 +4,11 @@ import WorkAccordionItem from './AccordionItem';
 import { Accordion as UiAccordion } from './ui/accordion';
 
 const Accordion = ({ data }) => (
-  <UiAccordion type="single" collapsible className="w-full overflow-hidden rounded-sm border border-border bg-card">
+  <UiAccordion
+    type="single"
+    collapsible
+    className="w-full overflow-hidden rounded-lg border border-border bg-card shadow-sm"
+  >
     {data.map((item) => (
       <WorkAccordionItem key={item.company} {...item} />
     ))}
