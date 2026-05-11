@@ -1,0 +1,46 @@
+import * as React from 'react';
+import * as AccordionPrimitive from '@radix-ui/react-accordion';
+import { ChevronDown } from 'lucide-react';
+
+import { cn } from '../../lib/utils';
+
+const Accordion = AccordionPrimitive.Root;
+
+const AccordionItem = React.forwardRef(({ className, ...props }, ref) => (
+  <AccordionPrimitive.Item
+    ref={ref}
+    className={cn('border-b border-border last:border-b-0', className)}
+    {...props}
+  />
+));
+AccordionItem.displayName = 'AccordionItem';
+
+const AccordionTrigger = React.forwardRef(({ className, children, ...props }, ref) => (
+  <AccordionPrimitive.Header className="flex">
+    <AccordionPrimitive.Trigger
+      ref={ref}
+      className={cn(
+        'group flex flex-1 items-center justify-between gap-4 bg-accent px-4 py-3 text-left text-[1.6rem] font-semibold text-accent-foreground transition hover:brightness-95 data-[state=open]:bg-accent-soft data-[state=open]:shadow-[inset_0_0_0_1px_var(--border)] sm:px-5',
+        className,
+      )}
+      {...props}
+    >
+      <span>{children}</span>
+      <ChevronDown className="h-5 w-5 shrink-0 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+    </AccordionPrimitive.Trigger>
+  </AccordionPrimitive.Header>
+));
+AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
+
+const AccordionContent = React.forwardRef(({ className, children, ...props }, ref) => (
+  <AccordionPrimitive.Content
+    ref={ref}
+    className="overflow-hidden text-[1.4rem] data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    {...props}
+  >
+    <div className={cn('bg-surface px-5 py-4 md:px-6', className)}>{children}</div>
+  </AccordionPrimitive.Content>
+));
+AccordionContent.displayName = AccordionPrimitive.Content.displayName;
+
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };

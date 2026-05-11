@@ -2,34 +2,61 @@ import work from '../content/pastWork';
 import projectsData from '../content/projects';
 
 import Accordion from './Accordion';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 
 const PastWork = () => {
   const { projects } = projectsData;
+
   return (
-    <div className="pastWork">
-      <div className="employment">
-        <h2>{work.title}</h2>
-        <p>{work.intro}</p>
+    <Card variant="section">
+      <CardHeader className="space-y-4">
+        <p className="text-[1.15rem] font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+          Experience
+        </p>
+        <div className="space-y-3">
+          <CardTitle>{work.title}</CardTitle>
+          <CardDescription className="max-w-4xl">{work.intro}</CardDescription>
+        </div>
+      </CardHeader>
+      <CardContent className="space-y-8">
         <Accordion data={work.positions} />
-      </div>
-      <div className="projects">
-        <h2>{projectsData.title}</h2>
-        <p>{projectsData.intro}</p>
-        <ul className="projects__list">
-        {projects.map((project, pKey) => {
-          const key1 = pKey + Math.random() * 10;
-          return (
-            <li key={key1}>
-              <h4>{project.title}</h4>
-              <p>{project.description}</p>
-              <a href={project.url}>{project.url}</a>
-            </li>
-          );
-        })}
-        </ul>
-      </div>
-    </div>
-  )
+
+        <Card variant="inset" className="space-y-4">
+          <CardHeader className="space-y-2 pb-0">
+            <p className="text-[1.15rem] font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+              Independent work
+            </p>
+            <h3 className="text-[2rem] font-semibold leading-tight tracking-[-0.02em] text-foreground sm:text-[2.2rem]">
+              {projectsData.title}
+            </h3>
+            <p className="text-[1.5rem] leading-relaxed text-muted-foreground sm:text-[1.6rem]">
+              {projectsData.intro}
+            </p>
+          </CardHeader>
+          <CardContent>
+            <ul className="grid gap-4 xl:grid-cols-2">
+              {projects.map((project) => (
+                <li key={project.url} className="rounded-lg border border-border bg-card px-4 py-4">
+                  <h4 className="text-[1.65rem] font-semibold tracking-[-0.02em] text-foreground">
+                    {project.title}
+                  </h4>
+                  <p className="mt-2 text-[1.5rem] leading-relaxed text-muted-foreground">
+                    {project.description}
+                  </p>
+                  <a
+                    className="mt-4 inline-block break-words text-[1.4rem] font-medium text-primary"
+                    href={project.url}
+                  >
+                    {project.url}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+      </CardContent>
+    </Card>
+  );
 };
 
 export default PastWork;
