@@ -44,7 +44,7 @@ const PastWork = () => {
                     {project.description}
                   </p>
                   <a
-                    className="mt-4 inline-block break-all text-[1.4rem] font-medium text-primary"
+                    className="mt-4 inline-block break-words text-[1.4rem] font-medium text-primary"
                     href={project.url}
                   >
                     {project.url}
