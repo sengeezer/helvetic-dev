@@ -27,8 +27,8 @@ const AccordionItem = ({ company, summary, projects }) => (
             Projects
           </h4>
           <ul className="space-y-5">
-            {projects.map((project) => (
-              <li key={`${company}-${project.title}`}>
+            {projects.map((project, projectIndex) => (
+              <li key={`${company}-${project.title}-${project.link || projectIndex}`}>
                 <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
                   <h5 className="text-[1.6rem] font-semibold leading-relaxed tracking-[-0.02em] text-foreground">
                     <a className="text-primary" href={project.link}>

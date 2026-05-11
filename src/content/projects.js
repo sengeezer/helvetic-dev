@@ -3,8 +3,8 @@ const projects = {
   intro: 'The following are some projects I have created to demonstrate skills I have acquired outside of formal work.',
   projects: [
     {
-      title: 'Simple Github Search',
-      description: 'A simple Github user search app with different display modes.',
+      title: 'Simple GitHub Search',
+      description: 'A simple GitHub user search app with different display modes.',
       url: 'https://sengeezer.github.io/gh-search/'
     },
     {
