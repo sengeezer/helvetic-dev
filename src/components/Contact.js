@@ -6,7 +6,7 @@ const platforms = [
   { label: 'LinkedIn', url: contact.platforms.linkedin },
   { label: 'X', url: contact.platforms.x },
   { label: 'Facebook', url: contact.platforms.facebook },
-  { label: 'Github', url: contact.platforms.github },
+  { label: 'GitHub', url: contact.platforms.github },
   { label: 'Blog', url: contact.platforms.blog },
 ];
 
