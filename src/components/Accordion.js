@@ -1,20 +1,18 @@
-import AccordionItem from './AccordionItem';
+import PropTypes from 'prop-types';
 
-const Accordion = ({ data }) => {
-  return (
-    <div className="wrapper">
-      <ul className="accordion-list">
-        {data.map((data1, key) => {
-          const key1 = key + Math.random() * 10;
-          return (
-            <li className="accordion-list__item" key={key1}>
-              <AccordionItem {...data1} />
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  );
+import WorkAccordionItem from './AccordionItem';
+import { Accordion as UiAccordion } from './ui/accordion';
+
+const Accordion = ({ data }) => (
+  <UiAccordion type="single" collapsible className="w-full overflow-hidden rounded-sm border border-border bg-card">
+    {data.map((item) => (
+      <WorkAccordionItem key={item.company} {...item} />
+    ))}
+  </UiAccordion>
+);
+
+Accordion.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Accordion;

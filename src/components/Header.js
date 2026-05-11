@@ -1,15 +1,8 @@
-// import NavItem from './NavItem';
-
 const Header = () => (
-  <header className="App-header">
-    <h1>Helvetic.dev</h1>
-    {/* <nav>
-      <ul>
-        <NavItem link="#main" name="Nav item 1" />
-        <NavItem link="#main" name="Nav item 2" />
-        <NavItem link="#main" name="Nav item 3" />
-      </ul>
-    </nav> */}
+  <header className="border-b border-border bg-primary px-4 py-4 sm:px-6 sm:py-5">
+    <h1 className="text-[2.6rem] font-medium leading-none tracking-tight text-primary-foreground sm:text-[3.2rem]">
+      Helvetic.dev
+    </h1>
   </header>
 );
 

@@ -2,6 +2,12 @@
 
 NextJS-powered online CV.
 
+## Styling
+
+- The app now uses Tailwind CSS with shadcn-style UI primitives.
+- Preserved color tokens live in `/home/runner/work/helvetic-dev/helvetic-dev/src/styles/globals.css`.
+- Shared UI building blocks live in `/home/runner/work/helvetic-dev/helvetic-dev/src/components/ui`.
+
 ## Credits
 
-* The Accordion component is based on [Accordion React Component](https://reactjsexample.com/accordion-react-component-with-animation/) by Artur Sedlukha.
+* The accordion is now built with Radix UI using the shadcn/ui component pattern.
