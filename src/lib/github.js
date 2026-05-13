@@ -43,7 +43,7 @@ export const getPinnedRepositories = async ({
 } = {}) => {
   if (!token) {
     throw new Error(
-      'GITHUB_TOKEN environment variable is required. Set it in Vercel project settings or your local .env file to a GitHub personal access token with public repository access.',
+      'GITHUB_TOKEN environment variable is required. Set it in Vercel project settings or your local .env file to a GitHub personal access token with read access to public repositories (for example, no extra scopes for public data).',
     );
   }
 
