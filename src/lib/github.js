@@ -69,11 +69,25 @@ export const getPinnedRepositories = async ({
     }),
   });
 
-  const payload = await response.json();
+  const rawPayload = await response.text();
+  let payload = null;
+
+  if (rawPayload) {
+    try {
+      payload = JSON.parse(rawPayload);
+    } catch {
+      payload = null;
+    }
+  }
 
   if (!response.ok) {
-    const message = payload?.message || 'GitHub GraphQL request failed.';
+    const message =
+      payload?.message || `GitHub GraphQL request failed with status ${response.status}.`;
     throw new Error(message);
+  }
+
+  if (!payload) {
+    throw new Error('GitHub GraphQL response was not valid JSON.');
   }
 
   if (Array.isArray(payload?.errors) && payload.errors.length > 0) {

@@ -28,7 +28,7 @@ export async function getStaticProps() {
       },
     };
   } catch (error) {
-    console.warn('Falling back to static projects.', error);
+    console.warn(`Falling back to static projects. ${error.message}`);
 
     return {
       props: {
