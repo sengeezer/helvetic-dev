@@ -42,9 +42,7 @@ export const getPinnedRepositories = async ({
   token = process.env.GITHUB_TOKEN,
 } = {}) => {
   if (!token) {
-    throw new Error(
-      'GITHUB_TOKEN environment variable is required. Set it in Vercel project settings or your local .env file to a GitHub personal access token with read access to public repositories (for example, no extra scopes for public data).',
-    );
+    throw new Error('GITHUB_TOKEN environment variable is required. See README for setup instructions.');
   }
 
   const response = await fetch(GITHUB_API_URL, {
@@ -90,7 +88,7 @@ export const getPinnedRepositories = async ({
   const repositories = payload?.data?.user?.pinnedItems?.nodes;
 
   if (!Array.isArray(repositories)) {
-    throw new Error('Expected pinned repositories array in response, but got invalid structure.');
+    throw new Error(`Expected pinned repositories array in response, but got ${typeof repositories}.`);
   }
 
   return repositories.map(normalizeRepository).filter(Boolean);
