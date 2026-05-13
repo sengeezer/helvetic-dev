@@ -1,5 +1,4 @@
-import PropTypes from 'prop-types';
-
+import { projectsPropType } from '../lib/projectPropTypes';
 import Intro from './Intro';
 import About from './About';
 import PastWork from './PastWork';
@@ -23,7 +22,7 @@ const Main = ({ projects }) => (
 );
 
 Main.propTypes = {
-  projects: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  projects: projectsPropType,
 };
 
 export default Main;

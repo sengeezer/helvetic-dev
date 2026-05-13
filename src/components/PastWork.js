@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types';
-
 import work from '../content/pastWork';
 import projectsData from '../content/projects';
+import { projectsPropType } from '../lib/projectPropTypes';
 
 import Accordion from './Accordion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
@@ -83,17 +82,7 @@ const PastWork = ({ projects }) => {
 };
 
 PastWork.propTypes = {
-  projects: PropTypes.arrayOf(
-    PropTypes.shape({
-      description: PropTypes.string.isRequired,
-      homepageUrl: PropTypes.string,
-      primaryLanguage: PropTypes.string,
-      repositoryUrl: PropTypes.string,
-      slug: PropTypes.string.isRequired,
-      stars: PropTypes.number,
-      title: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
+  projects: projectsPropType,
 };
 
 export default PastWork;

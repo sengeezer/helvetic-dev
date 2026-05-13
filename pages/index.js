@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types';
-
 import projectsContent from '../src/content/projects';
 import { getPinnedRepositories } from '../src/lib/github';
+import { projectsPropType } from '../src/lib/projectPropTypes';
 import Header from '../src/components/Header';
 import Main from '../src/components/Main';
 import Footer from '../src/components/Footer';
@@ -39,5 +38,5 @@ export async function getStaticProps() {
 }
 
 Home.propTypes = {
-  projects: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  projects: projectsPropType,
 };

@@ -87,7 +87,7 @@ export const getPinnedRepositories = async ({
   }
 
   if (!payload) {
-    throw new Error('GitHub GraphQL response was not valid JSON.');
+    throw new Error('GitHub GraphQL response was empty or not valid JSON.');
   }
 
   if (Array.isArray(payload?.errors) && payload.errors.length > 0) {
