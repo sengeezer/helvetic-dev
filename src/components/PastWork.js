@@ -1,12 +1,12 @@
+import PropTypes from 'prop-types';
+
 import work from '../content/pastWork';
 import projectsData from '../content/projects';
 
 import Accordion from './Accordion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 
-const PastWork = () => {
-  const { projects } = projectsData;
-
+const PastWork = ({ projects }) => {
   return (
     <Card variant="section">
       <CardHeader className="space-y-4">
@@ -35,28 +35,65 @@ const PastWork = () => {
           </CardHeader>
           <CardContent>
             <ul className="grid gap-4 xl:grid-cols-2">
-              {projects.map((project) => (
-                <li key={project.url} className="rounded-lg border border-border bg-card px-4 py-4">
-                  <h4 className="text-[1.65rem] font-semibold tracking-[-0.02em] text-foreground">
-                    {project.title}
-                  </h4>
-                  <p className="mt-2 text-[1.5rem] leading-relaxed text-muted-foreground">
-                    {project.description}
-                  </p>
-                  <a
-                    className="mt-4 inline-block break-words text-[1.4rem] font-medium text-primary"
-                    href={project.url}
-                  >
-                    {project.url}
-                  </a>
-                </li>
-              ))}
+              {projects.map((project) => {
+                const primaryUrl = project.homepageUrl || project.repositoryUrl;
+                const primaryLabel = project.homepageUrl ? 'Live site' : 'Repository';
+
+                return (
+                  <li key={project.slug} className="rounded-lg border border-border bg-card px-4 py-4">
+                    <h4 className="text-[1.65rem] font-semibold tracking-[-0.02em] text-foreground">
+                      {project.title}
+                    </h4>
+                    {project.primaryLanguage || project.stars ? (
+                      <div className="mt-3 flex flex-wrap gap-2 text-[1.2rem] font-medium uppercase tracking-[0.15em] text-muted-foreground">
+                        {project.primaryLanguage ? (
+                          <span className="rounded-full border border-border px-2 py-1">
+                            {project.primaryLanguage}
+                          </span>
+                        ) : null}
+                        {project.stars ? (
+                          <span className="rounded-full border border-border px-2 py-1">
+                            ★ {project.stars}
+                          </span>
+                        ) : null}
+                      </div>
+                    ) : null}
+                    <p className="mt-2 text-[1.5rem] leading-relaxed text-muted-foreground">
+                      {project.description}
+                    </p>
+                    <div className="mt-4 flex flex-wrap gap-3 text-[1.4rem] font-medium">
+                      <a className="break-words text-primary" href={primaryUrl}>
+                        {primaryLabel} ↗
+                      </a>
+                      {project.homepageUrl && project.repositoryUrl ? (
+                        <a className="break-words text-primary" href={project.repositoryUrl}>
+                          GitHub repo ↗
+                        </a>
+                      ) : null}
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </CardContent>
         </Card>
       </CardContent>
     </Card>
   );
+};
+
+PastWork.propTypes = {
+  projects: PropTypes.arrayOf(
+    PropTypes.shape({
+      description: PropTypes.string.isRequired,
+      homepageUrl: PropTypes.string,
+      primaryLanguage: PropTypes.string,
+      repositoryUrl: PropTypes.string,
+      slug: PropTypes.string.isRequired,
+      stars: PropTypes.number,
+      title: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default PastWork;

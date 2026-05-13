@@ -1,18 +1,20 @@
 const projects = {
   title: 'Projects',
   intro: 'The following are some projects I have created to demonstrate skills I have acquired outside of formal work.',
-  projects: [
+  fallbackProjects: [
     {
+      slug: 'gh-search',
       title: 'Simple GitHub Search',
       description: 'A simple GitHub user search app with different display modes.',
-      url: 'https://sengeezer.github.io/gh-search/'
+      homepageUrl: 'https://sengeezer.github.io/gh-search/',
     },
     {
+      slug: 'react-audio-player',
       title: 'React Audio Player',
       description: 'An basic audio player based on HTML5 audio.',
-      url: 'https://sengeezer.github.io/react-audio-player/'
-    }
-  ]
+      homepageUrl: 'https://sengeezer.github.io/react-audio-player/',
+    },
+  ],
 };
 
 export default projects;
