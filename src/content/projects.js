@@ -11,7 +11,7 @@ const projects = {
     {
       slug: 'react-audio-player',
       title: 'React Audio Player',
-      description: 'An basic audio player based on HTML5 audio.',
+      description: 'A basic audio player based on HTML5 audio.',
       homepageUrl: 'https://sengeezer.github.io/react-audio-player/',
     },
   ],

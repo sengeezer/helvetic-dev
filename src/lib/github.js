@@ -51,7 +51,9 @@ export const getPinnedRepositories = async ({
   token = process.env.GITHUB_TOKEN,
 } = {}) => {
   if (!token) {
-    throw new Error('Missing GITHUB_TOKEN.');
+    throw new Error(
+      'GITHUB_TOKEN environment variable is required. Please set it to a GitHub personal access token with public repository access.',
+    );
   }
 
   const response = await fetch(GITHUB_API_URL, {
@@ -97,7 +99,7 @@ export const getPinnedRepositories = async ({
   const repositories = payload?.data?.user?.pinnedItems?.nodes;
 
   if (!Array.isArray(repositories)) {
-    throw new Error('Pinned repositories response was malformed.');
+    throw new Error('Expected pinned repositories array in response, but got invalid structure.');
   }
 
   return repositories.map(normalizeRepository).filter(Boolean);
