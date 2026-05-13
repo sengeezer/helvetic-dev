@@ -1,6 +1,7 @@
 const GITHUB_API_URL = 'https://api.github.com/graphql';
 const DEFAULT_GITHUB_LOGIN = 'sengeezer';
 const DEFAULT_PINNED_REPOSITORY_COUNT = 6;
+const DEFAULT_PROJECT_DESCRIPTION = 'Description coming soon.';
 
 const PINNED_REPOSITORIES_QUERY = `
   query PinnedRepositories($login: String!, $count: Int!) {
@@ -30,7 +31,7 @@ const normalizeRepository = (repository) => {
   return {
     slug: `${repository.owner.login}/${repository.name}`,
     title: repository.name,
-    description: repository.description?.trim() || 'Description coming soon.',
+    description: repository.description?.trim() || DEFAULT_PROJECT_DESCRIPTION,
     repositoryUrl: repository.url,
   };
 };
