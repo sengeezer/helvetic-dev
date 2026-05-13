@@ -2,11 +2,8 @@ import PropTypes from 'prop-types';
 
 const projectShape = {
   description: PropTypes.string.isRequired,
-  homepageUrl: PropTypes.string,
-  primaryLanguage: PropTypes.string,
-  repositoryUrl: PropTypes.string,
+  repositoryUrl: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
-  stars: PropTypes.number,
   title: PropTypes.string.isRequired,
 };
 

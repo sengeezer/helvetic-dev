@@ -12,11 +12,6 @@ const PINNED_REPOSITORIES_QUERY = `
             name
             description
             url
-            homepageUrl
-            stargazerCount
-            primaryLanguage {
-              name
-            }
             owner {
               login
             }
@@ -32,16 +27,11 @@ const normalizeRepository = (repository) => {
     return null;
   }
 
-  const homepageUrl = repository.homepageUrl?.trim() || null;
-
   return {
     slug: `${repository.owner.login}/${repository.name}`,
     title: repository.name,
     description: repository.description?.trim() || 'Description coming soon.',
     repositoryUrl: repository.url,
-    homepageUrl,
-    primaryLanguage: repository.primaryLanguage?.name || null,
-    stars: typeof repository.stargazerCount === 'number' ? repository.stargazerCount : null,
   };
 };
 

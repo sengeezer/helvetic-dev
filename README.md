@@ -18,9 +18,9 @@ NextJS-powered online CV.
 ## GitHub pinned repositories
 
 - The Projects section is populated from pinned repositories on GitHub at build time.
-- Set `GITHUB_TOKEN` to a GitHub personal access token that can query the GraphQL API for public profile and repository metadata. No write permissions are required.
+- Set `GITHUB_TOKEN` in Vercel project environment variables so build-time static generation can query the GitHub GraphQL API. No write permissions are required.
 - Optionally set `GITHUB_PINNED_USERNAME` to override the GitHub username to query. It defaults to `sengeezer`.
-- If the token is missing or GitHub data cannot be fetched, the site falls back to the static project entries in `src/content/projects.js`.
+- If the token is missing or GitHub data cannot be fetched, the Projects section keeps its heading/copy and shows a temporary unavailable message instead of outdated static entries.
 
 ## Credits
 

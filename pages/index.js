@@ -1,4 +1,3 @@
-import projectsContent from '../src/content/projects';
 import { getPinnedRepositories } from '../src/lib/github';
 import { projectsPropType } from '../src/lib/projectPropTypes';
 import Header from '../src/components/Header';
@@ -23,15 +22,15 @@ export async function getStaticProps() {
 
     return {
       props: {
-        projects: projects.length > 0 ? projects : projectsContent.fallbackProjects,
+        projects,
       },
     };
   } catch (error) {
-    console.warn(`Falling back to static projects. ${error.message}`);
+    console.warn(`Projects unavailable from GitHub. ${error.message}`);
 
     return {
       props: {
-        projects: projectsContent.fallbackProjects,
+        projects: [],
       },
     };
   }
