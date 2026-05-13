@@ -42,7 +42,7 @@ export const getPinnedRepositories = async ({
   token = process.env.GITHUB_TOKEN,
 } = {}) => {
   if (!token) {
-    throw new Error('GITHUB_TOKEN environment variable is required. See README for setup instructions.');
+    throw new Error('GITHUB_TOKEN environment variable is required. See README.md for setup instructions.');
   }
 
   const response = await fetch(GITHUB_API_URL, {
