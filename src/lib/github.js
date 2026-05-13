@@ -41,7 +41,7 @@ const normalizeRepository = (repository) => {
     repositoryUrl: repository.url,
     homepageUrl,
     primaryLanguage: repository.primaryLanguage?.name || null,
-    stars: Number.isFinite(repository.stargazerCount) ? repository.stargazerCount : null,
+    stars: typeof repository.stargazerCount === 'number' ? repository.stargazerCount : null,
   };
 };
 
