@@ -1,18 +1,7 @@
 const projects = {
   title: 'Projects',
-  intro: 'The following are some projects I have created to demonstrate skills I have acquired outside of formal work.',
-  projects: [
-    {
-      title: 'Simple GitHub Search',
-      description: 'A simple GitHub user search app with different display modes.',
-      url: 'https://sengeezer.github.io/gh-search/'
-    },
-    {
-      title: 'React Audio Player',
-      description: 'An basic audio player based on HTML5 audio.',
-      url: 'https://sengeezer.github.io/react-audio-player/'
-    }
-  ]
+  intro: 'The following are some projects I have created to demonstrate skills acquired outside of formal work.',
+  emptyState: 'Projects information is currently unavailable.',
 };
 
 export default projects;
